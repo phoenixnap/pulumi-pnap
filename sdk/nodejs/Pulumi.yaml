@@ -1,0 +1,3 @@
+name: pnap
+description: A Pulumi resource provider for pnap.
+language: nodejs
