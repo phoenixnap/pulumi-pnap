@@ -1,4 +1,4 @@
-module github.com/pulumi/pulumi-pnap/provider
+module github.com/phoenixnap/pulumi-pnap/provider
 
 go 1.13
 
