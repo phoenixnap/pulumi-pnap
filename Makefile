@@ -3,7 +3,7 @@ include build/common.mk
 
 PACK             := pnap
 PACKDIR          := sdk
-PROJECT          := github.com/pulumi/pulumi-${PACK}
+PROJECT          := github.com/phoenixnap/pulumi-${PACK}
 NODE_MODULE_NAME := @pulumi/${PACK}
 
 TFGEN           := pulumi-tfgen-${PACK}

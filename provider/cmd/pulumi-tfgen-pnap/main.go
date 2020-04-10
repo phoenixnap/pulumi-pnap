@@ -17,7 +17,7 @@ package main
 import (
 	"github.com/pulumi/pulumi-terraform-bridge/pkg/tfgen"
 
-	pnap "github.com/pulumi/pulumi-pnap/provider"
+	pnap "github.com/phoenixnap/pulumi-pnap/provider"
 	"github.com/pulumi/pulumi-pnap/provider/pkg/version"
 )
 
