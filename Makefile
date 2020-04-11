@@ -39,11 +39,38 @@ build:: provider
 	cd provider && for LANGUAGE in "nodejs" "python" "go" "dotnet"  ; do \
 		$(TFGEN) $$LANGUAGE --overlays overlays/$$LANGUAGE/ --out ../${PACKDIR}/$$LANGUAGE/ || exit 3 ; \
 	done
+	cd ${PACKDIR}/nodejs/ && \
+		yarn install && \
+		yarn run tsc && \
+		cp ../../README.md ../../LICENSE package.json yarn.lock ./bin/ && \
+		sed -i.bak "s/\$${VERSION}/$(VERSION)/g" ./bin/package.json
+	cd ${PACKDIR}/python/ && \
+		cp ../../README.md . && \
+		$(PYTHON) setup.py clean --all 2>/dev/null && \
+		rm -rf ./bin/ ../python.bin/ && cp -R . ../python.bin && mv ../python.bin ./bin && \
+		sed -i.bak -e "s/\$${VERSION}/$(PYPI_VERSION)/g" -e "s/\$${PLUGIN_VERSION}/$(VERSION)/g" ./bin/setup.py && \
+		rm ./bin/setup.py.bak && \
+		cd ./bin && $(PYTHON) setup.py build sdist
+	cd ${PACKDIR}/dotnet/ && \
+  	echo "${VERSION:v%=%}" >version.txt && \
+  	dotnet build /p:Version=${DOTNET_VERSION}
 
 lint::
 	#golangci-lint run
 
 install:: provider
+	[ ! -e "$(PULUMI_NODE_MODULES)/$(NODE_MODULE_NAME)" ] || rm -rf "$(PULUMI_NODE_MODULES)/$(NODE_MODULE_NAME)"
+		mkdir -p "$(PULUMI_NODE_MODULES)/$(NODE_MODULE_NAME)"
+		cp -r ${PACKDIR}/nodejs/bin/. "$(PULUMI_NODE_MODULES)/$(NODE_MODULE_NAME)"
+		rm -rf "$(PULUMI_NODE_MODULES)/$(NODE_MODULE_NAME)/node_modules"
+		cd "$(PULUMI_NODE_MODULES)/$(NODE_MODULE_NAME)" && \
+			yarn install --offline --production && \
+			(yarn unlink > /dev/null 2>&1 || true) && \
+			yarn link
+		cd ${PACKDIR}/python/bin && $(PIP) install --user -e .
+		echo "Copying NuGet packages to ${PULUMI_NUGET}"
+		[ ! -e "$(PULUMI_NUGET)" ] || rm -rf "$(PULUMI_NUGET)/*"
+		find . -name '*.nupkg' -exec cp -p {} ${PULUMI_NUGET} \;
 	
 
 test_fast::
