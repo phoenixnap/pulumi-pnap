@@ -80,7 +80,7 @@ func Provider() tfbridge.ProviderInfo {
 		Keywords:    []string{"pulumi", "pnap"},
 		License:     "Apache-2.0",
 		Homepage:    "https://pulumi.io",
-		Repository:  "https://github.com/pulumi/pulumi-pnap",
+		Repository:  "https://github.com/phoenixnap/pulumi-pnap",
 		Config: map[string]*tfbridge.SchemaInfo{
 			
 		},
@@ -93,46 +93,46 @@ func Provider() tfbridge.ProviderInfo {
 				Tok: makeResource(mainMod, "Server"),
 				Fields: map[string]*tfbridge.SchemaInfo{
 					"status": {
-						Type: makeType(mainMod, "Status"),
+						Type: "string",
 					},
 					"hostname": {
-						Type: makeType(mainMod, "Hostname"),
+						Type: "string",
 					},
 					"description": {
-						Type: makeType(mainMod, "Description"),
+						Type: "string",
 					},
 					"public": {
-						Type: makeType(mainMod, "Public"),
+						Type: "bool",
 					},
 					"private_ip_addresses": {
-						Elem: &tfbridge.SchemaInfo{Type: makeType(mainMod, "PrivateIPAddress")},
+						Elem: &tfbridge.SchemaInfo{Type: "string")},
 					},
 					"public_ip_addresses": {
-						Elem: &tfbridge.SchemaInfo{Type: makeType(mainMod, "PublicIPAddress")},
+						Elem: &tfbridge.SchemaInfo{Type: "string"},
 					},
 					"os": {
-						Type: makeType(mainMod, "OS"),
+						Type: "string",
 					},
 					"type": {
-						Type: makeType(mainMod, "Type"),
+						Type: "string",
 					},
 					"ssh_keys": {
-						Elem: &tfbridge.SchemaInfo{Type: makeType(mainMod, "SSHKey")},
+						Elem: &tfbridge.SchemaInfo{Type: "string"},
 					},
 					"location": {
-						Type: makeType(mainMod, "Location"),
+						Type: "string",
 					},
 					"cpu": {
-						Type: makeType(mainMod, "CPU"),
+						Type: "string",
 					},
 					"ram": {
-						Type: makeType(mainMod, "RAM"),
+						Type: "string",
 					},
 					"storage": {
-						Type: makeType(mainMod, "Storage"),
+						Type: "string",
 					},
 					"action": {
-						Type: makeType(mainMod, "Action"),
+						Type: "string",
 					},
 				},
 			},
