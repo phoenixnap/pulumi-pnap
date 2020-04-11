@@ -19,10 +19,10 @@ import (
 
 	// "github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/terraform"
+	prcko "github.com/phoenixnap/terraform-provider-pnap/pnap"
 	"github.com/pulumi/pulumi-terraform-bridge/pkg/tfbridge"
 	"github.com/pulumi/pulumi/sdk/go/common/resource"
 	"github.com/pulumi/pulumi/sdk/go/common/tokens"
-	prcko "github.com/phoenixnap/terraform-provider-pnap/pnap"
 )
 
 // all of the token components used below.
@@ -74,21 +74,19 @@ func Provider() tfbridge.ProviderInfo {
 
 	// Create a Pulumi provider mapping
 	prov := tfbridge.ProviderInfo{
-		P:           p,
-		Name:        "pnap",
-		Description: "A PNAP package for creating and managing X cloud resources.",
-		Keywords:    []string{"pulumi", "pnap"},
-		License:     "Apache-2.0",
-		Homepage:    "https://pulumi.io",
-		Repository:  "https://github.com/phoenixnap/pulumi-pnap",
-		Config: map[string]*tfbridge.SchemaInfo{
-			
-		},
+		P:                    p,
+		Name:                 "pnap",
+		Description:          "A PNAP package for creating and managing X cloud resources.",
+		Keywords:             []string{"pulumi", "pnap"},
+		License:              "Apache-2.0",
+		Homepage:             "https://pulumi.io",
+		Repository:           "https://github.com/phoenixnap/pulumi-pnap",
+		Config:               map[string]*tfbridge.SchemaInfo{},
 		PreConfigureCallback: preConfigureCallback,
 		Resources: map[string]*tfbridge.ResourceInfo{
 			// Map each resource in the Terraform provider to a Pulumi type. An example
 			// is below.
-			
+
 			"pnap_server": {
 				Tok: makeResource(mainMod, "Server"),
 				Fields: map[string]*tfbridge.SchemaInfo{
@@ -102,7 +100,7 @@ func Provider() tfbridge.ProviderInfo {
 						Type: "string",
 					},
 					"public": {
-						Type: "bool",
+						Type: "boolean",
 					},
 					"private_ip_addresses": {
 						Elem: &tfbridge.SchemaInfo{Type: "string"},
@@ -137,7 +135,7 @@ func Provider() tfbridge.ProviderInfo {
 				},
 			},
 		},
-		
+
 		JavaScript: &tfbridge.JavaScriptInfo{
 			// List any npm dependencies and their versions
 			Dependencies: map[string]string{
@@ -147,7 +145,6 @@ func Provider() tfbridge.ProviderInfo {
 				"@types/node": "^8.0.25", // so we can access strongly typed node definitions.
 				"@types/mime": "^2.0.0",
 			},
-			
 		},
 		Python: &tfbridge.PythonInfo{
 			// List any Python dependencies and their version ranges
