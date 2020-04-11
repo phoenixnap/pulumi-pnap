@@ -30,7 +30,7 @@ generate_schema:: tfgen
 
 provider:: generate_schema
 	cd provider && go generate cmd/${PROVIDER}/main.go
-	cd provider && go install -ldflags "-X github.com/pulumi/pulumi-${PACK}/provider/pkg/version.Version=${VERSION}" ${PROJECT}/provider/cmd/${PROVIDER}
+	cd provider && go install -ldflags "-X github.com/phoenixnap/pulumi-${PACK}/provider/pkg/version.Version=${VERSION}" ${PROJECT}/provider/cmd/${PROVIDER}
 
 # NOTE: Since the plugin is published using the nodejs style semver version
 # We set the PLUGIN_VERSION to be the same as the version we use when building
