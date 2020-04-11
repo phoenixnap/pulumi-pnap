@@ -105,10 +105,10 @@ func Provider() tfbridge.ProviderInfo {
 						Type: "bool",
 					},
 					"private_ip_addresses": {
-						Elem: &tfbridge.SchemaInfo{Type: "string")},
+						Elem: &tfbridge.SchemaInfo{Type: "string"),},
 					},
 					"public_ip_addresses": {
-						Elem: &tfbridge.SchemaInfo{Type: "string"},
+						Elem: &tfbridge.SchemaInfo{Type: "string",},
 					},
 					"os": {
 						Type: "string",
@@ -117,7 +117,7 @@ func Provider() tfbridge.ProviderInfo {
 						Type: "string",
 					},
 					"ssh_keys": {
-						Elem: &tfbridge.SchemaInfo{Type: "string"},
+						Elem: &tfbridge.SchemaInfo{Type: "string",},
 					},
 					"location": {
 						Type: "string",
