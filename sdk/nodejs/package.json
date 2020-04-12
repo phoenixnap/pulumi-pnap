@@ -7,7 +7,7 @@
         "pnap"
     ],
     "homepage": "https://pulumi.io",
-    "repository": "https://github.com/pulumi/pulumi-pnap",
+    "repository": "https://github.com/phoenixnap/pulumi-pnap",
     "license": "Apache-2.0",
     "scripts": {
         "build": "tsc"

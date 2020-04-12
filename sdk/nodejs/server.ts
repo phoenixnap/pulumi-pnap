@@ -4,8 +4,6 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
-import {Action, CPU, Description, Hostname, Location, OS, PrivateIPAddress, Public, PublicIPAddress, RAM, SSHKey, Status, Storage, Type} from "./index";
-
 export class Server extends pulumi.CustomResource {
     /**
      * Get an existing Server resource's state with the given name, ID, and optional extra
@@ -33,20 +31,20 @@ export class Server extends pulumi.CustomResource {
         return obj['__pulumiType'] === Server.__pulumiType;
     }
 
-    public readonly action!: pulumi.Output<Action | undefined>;
-    public /*out*/ readonly cpu!: pulumi.Output<CPU>;
-    public readonly description!: pulumi.Output<Description | undefined>;
-    public readonly hostname!: pulumi.Output<Hostname>;
-    public readonly location!: pulumi.Output<Location>;
-    public readonly os!: pulumi.Output<OS>;
-    public /*out*/ readonly privateIpAddresses!: pulumi.Output<PrivateIPAddress[]>;
-    public readonly public!: pulumi.Output<Public>;
-    public /*out*/ readonly publicIpAddresses!: pulumi.Output<PublicIPAddress[]>;
-    public /*out*/ readonly ram!: pulumi.Output<RAM>;
-    public readonly sshKeys!: pulumi.Output<SSHKey[]>;
-    public /*out*/ readonly status!: pulumi.Output<Status>;
-    public /*out*/ readonly storage!: pulumi.Output<Storage>;
-    public readonly type!: pulumi.Output<Type>;
+    public readonly action!: pulumi.Output<string | undefined>;
+    public /*out*/ readonly cpu!: pulumi.Output<string>;
+    public readonly description!: pulumi.Output<string | undefined>;
+    public readonly hostname!: pulumi.Output<string>;
+    public readonly location!: pulumi.Output<string>;
+    public readonly os!: pulumi.Output<string>;
+    public /*out*/ readonly privateIpAddresses!: pulumi.Output<string[]>;
+    public readonly public!: pulumi.Output<boolean>;
+    public /*out*/ readonly publicIpAddresses!: pulumi.Output<string[]>;
+    public /*out*/ readonly ram!: pulumi.Output<string>;
+    public readonly sshKeys!: pulumi.Output<string[]>;
+    public /*out*/ readonly status!: pulumi.Output<string>;
+    public /*out*/ readonly storage!: pulumi.Output<string>;
+    public readonly type!: pulumi.Output<string>;
 
     /**
      * Create a Server resource with the given unique name, arguments, and options.
@@ -124,32 +122,32 @@ export class Server extends pulumi.CustomResource {
  * Input properties used for looking up and filtering Server resources.
  */
 export interface ServerState {
-    readonly action?: pulumi.Input<Action>;
-    readonly cpu?: pulumi.Input<CPU>;
-    readonly description?: pulumi.Input<Description>;
-    readonly hostname?: pulumi.Input<Hostname>;
-    readonly location?: pulumi.Input<Location>;
-    readonly os?: pulumi.Input<OS>;
-    readonly privateIpAddresses?: pulumi.Input<pulumi.Input<PrivateIPAddress>[]>;
-    readonly public?: pulumi.Input<Public>;
-    readonly publicIpAddresses?: pulumi.Input<pulumi.Input<PublicIPAddress>[]>;
-    readonly ram?: pulumi.Input<RAM>;
-    readonly sshKeys?: pulumi.Input<pulumi.Input<SSHKey>[]>;
-    readonly status?: pulumi.Input<Status>;
-    readonly storage?: pulumi.Input<Storage>;
-    readonly type?: pulumi.Input<Type>;
+    readonly action?: pulumi.Input<string>;
+    readonly cpu?: pulumi.Input<string>;
+    readonly description?: pulumi.Input<string>;
+    readonly hostname?: pulumi.Input<string>;
+    readonly location?: pulumi.Input<string>;
+    readonly os?: pulumi.Input<string>;
+    readonly privateIpAddresses?: pulumi.Input<pulumi.Input<string>[]>;
+    readonly public?: pulumi.Input<boolean>;
+    readonly publicIpAddresses?: pulumi.Input<pulumi.Input<string>[]>;
+    readonly ram?: pulumi.Input<string>;
+    readonly sshKeys?: pulumi.Input<pulumi.Input<string>[]>;
+    readonly status?: pulumi.Input<string>;
+    readonly storage?: pulumi.Input<string>;
+    readonly type?: pulumi.Input<string>;
 }
 
 /**
  * The set of arguments for constructing a Server resource.
  */
 export interface ServerArgs {
-    readonly action?: pulumi.Input<Action>;
-    readonly description?: pulumi.Input<Description>;
-    readonly hostname: pulumi.Input<Hostname>;
-    readonly location: pulumi.Input<Location>;
-    readonly os: pulumi.Input<OS>;
-    readonly public: pulumi.Input<Public>;
-    readonly sshKeys: pulumi.Input<pulumi.Input<SSHKey>[]>;
-    readonly type: pulumi.Input<Type>;
+    readonly action?: pulumi.Input<string>;
+    readonly description?: pulumi.Input<string>;
+    readonly hostname: pulumi.Input<string>;
+    readonly location: pulumi.Input<string>;
+    readonly os: pulumi.Input<string>;
+    readonly public: pulumi.Input<boolean>;
+    readonly sshKeys: pulumi.Input<pulumi.Input<string>[]>;
+    readonly type: pulumi.Input<string>;
 }

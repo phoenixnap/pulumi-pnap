@@ -1,4 +1,4 @@
-name: webserver-packet
-description: An simple server on Packet.
+name: webserver-pnap
+description: An simple server on Pnap.
 runtime: nodejs
 

@@ -39,7 +39,7 @@ setup(name='pulumi_pnap',
       keywords='pulumi pnap',
       url='https://pulumi.io',
       project_urls={
-          'Repository': 'https://github.com/pulumi/pulumi-pnap'
+          'Repository': 'https://github.com/phoenixnap/pulumi-pnap'
       },
       license='Apache-2.0',
       packages=find_packages(),
