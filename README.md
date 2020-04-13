@@ -34,7 +34,7 @@ To use from Go, use `go get` to grab the latest version of the library
 ## Configuration
 
 Configuration file config.yaml is required for authentication. File should be located in user home directory.
-File path for linux is /.pnap/config.yaml and file path for windows is \\AppData\\Roaming\\pnap\\config.yaml
+File path for Linux is /.pnap/config.yaml and file path for Windows is \\AppData\\Roaming\\pnap\\config.yaml
 
 The following shows a sample config file: 
 
