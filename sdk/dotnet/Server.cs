@@ -32,9 +32,6 @@ namespace Pulumi.PNAP
         [Output("privateIpAddresses")]
         public Output<ImmutableArray<string>> PrivateIpAddresses { get; private set; } = null!;
 
-        [Output("public")]
-        public Output<bool> Public { get; private set; } = null!;
-
         [Output("publicIpAddresses")]
         public Output<ImmutableArray<string>> PublicIpAddresses { get; private set; } = null!;
 
@@ -114,9 +111,6 @@ namespace Pulumi.PNAP
         [Input("os", required: true)]
         public Input<string> Os { get; set; } = null!;
 
-        [Input("public", required: true)]
-        public Input<bool> Public { get; set; } = null!;
-
         [Input("sshKeys", required: true)]
         private InputList<string>? _sshKeys;
         public InputList<string> SshKeys
@@ -160,9 +154,6 @@ namespace Pulumi.PNAP
             get => _privateIpAddresses ?? (_privateIpAddresses = new InputList<string>());
             set => _privateIpAddresses = value;
         }
-
-        [Input("public")]
-        public Input<bool>? Public { get; set; }
 
         [Input("publicIpAddresses")]
         private InputList<string>? _publicIpAddresses;

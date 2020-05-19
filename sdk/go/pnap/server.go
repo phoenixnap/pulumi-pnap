@@ -21,7 +21,6 @@ type Server struct {
 	Location           pulumi.StringOutput      `pulumi:"location"`
 	Os                 pulumi.StringOutput      `pulumi:"os"`
 	PrivateIpAddresses pulumi.StringArrayOutput `pulumi:"privateIpAddresses"`
-	Public             pulumi.BoolOutput        `pulumi:"public"`
 	PublicIpAddresses  pulumi.StringArrayOutput `pulumi:"publicIpAddresses"`
 	Ram                pulumi.StringOutput      `pulumi:"ram"`
 	SshKeys            pulumi.StringArrayOutput `pulumi:"sshKeys"`
@@ -41,9 +40,6 @@ func NewServer(ctx *pulumi.Context,
 	}
 	if args == nil || args.Os == nil {
 		return nil, errors.New("missing required argument 'Os'")
-	}
-	if args == nil || args.Public == nil {
-		return nil, errors.New("missing required argument 'Public'")
 	}
 	if args == nil || args.SshKeys == nil {
 		return nil, errors.New("missing required argument 'SshKeys'")
@@ -83,7 +79,6 @@ type serverState struct {
 	Location           *string  `pulumi:"location"`
 	Os                 *string  `pulumi:"os"`
 	PrivateIpAddresses []string `pulumi:"privateIpAddresses"`
-	Public             *bool    `pulumi:"public"`
 	PublicIpAddresses  []string `pulumi:"publicIpAddresses"`
 	Ram                *string  `pulumi:"ram"`
 	SshKeys            []string `pulumi:"sshKeys"`
@@ -100,7 +95,6 @@ type ServerState struct {
 	Location           pulumi.StringPtrInput
 	Os                 pulumi.StringPtrInput
 	PrivateIpAddresses pulumi.StringArrayInput
-	Public             pulumi.BoolPtrInput
 	PublicIpAddresses  pulumi.StringArrayInput
 	Ram                pulumi.StringPtrInput
 	SshKeys            pulumi.StringArrayInput
@@ -119,7 +113,6 @@ type serverArgs struct {
 	Hostname    string   `pulumi:"hostname"`
 	Location    string   `pulumi:"location"`
 	Os          string   `pulumi:"os"`
-	Public      bool     `pulumi:"public"`
 	SshKeys     []string `pulumi:"sshKeys"`
 	Type        string   `pulumi:"type"`
 }
@@ -131,7 +124,6 @@ type ServerArgs struct {
 	Hostname    pulumi.StringInput
 	Location    pulumi.StringInput
 	Os          pulumi.StringInput
-	Public      pulumi.BoolInput
 	SshKeys     pulumi.StringArrayInput
 	Type        pulumi.StringInput
 }

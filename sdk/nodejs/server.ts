@@ -38,7 +38,6 @@ export class Server extends pulumi.CustomResource {
     public readonly location!: pulumi.Output<string>;
     public readonly os!: pulumi.Output<string>;
     public /*out*/ readonly privateIpAddresses!: pulumi.Output<string[]>;
-    public readonly public!: pulumi.Output<boolean>;
     public /*out*/ readonly publicIpAddresses!: pulumi.Output<string[]>;
     public /*out*/ readonly ram!: pulumi.Output<string>;
     public readonly sshKeys!: pulumi.Output<string[]>;
@@ -65,7 +64,6 @@ export class Server extends pulumi.CustomResource {
             inputs["location"] = state ? state.location : undefined;
             inputs["os"] = state ? state.os : undefined;
             inputs["privateIpAddresses"] = state ? state.privateIpAddresses : undefined;
-            inputs["public"] = state ? state.public : undefined;
             inputs["publicIpAddresses"] = state ? state.publicIpAddresses : undefined;
             inputs["ram"] = state ? state.ram : undefined;
             inputs["sshKeys"] = state ? state.sshKeys : undefined;
@@ -83,9 +81,6 @@ export class Server extends pulumi.CustomResource {
             if (!args || args.os === undefined) {
                 throw new Error("Missing required property 'os'");
             }
-            if (!args || args.public === undefined) {
-                throw new Error("Missing required property 'public'");
-            }
             if (!args || args.sshKeys === undefined) {
                 throw new Error("Missing required property 'sshKeys'");
             }
@@ -97,7 +92,6 @@ export class Server extends pulumi.CustomResource {
             inputs["hostname"] = args ? args.hostname : undefined;
             inputs["location"] = args ? args.location : undefined;
             inputs["os"] = args ? args.os : undefined;
-            inputs["public"] = args ? args.public : undefined;
             inputs["sshKeys"] = args ? args.sshKeys : undefined;
             inputs["type"] = args ? args.type : undefined;
             inputs["cpu"] = undefined /*out*/;
@@ -129,7 +123,6 @@ export interface ServerState {
     readonly location?: pulumi.Input<string>;
     readonly os?: pulumi.Input<string>;
     readonly privateIpAddresses?: pulumi.Input<pulumi.Input<string>[]>;
-    readonly public?: pulumi.Input<boolean>;
     readonly publicIpAddresses?: pulumi.Input<pulumi.Input<string>[]>;
     readonly ram?: pulumi.Input<string>;
     readonly sshKeys?: pulumi.Input<pulumi.Input<string>[]>;
@@ -147,7 +140,6 @@ export interface ServerArgs {
     readonly hostname: pulumi.Input<string>;
     readonly location: pulumi.Input<string>;
     readonly os: pulumi.Input<string>;
-    readonly public: pulumi.Input<boolean>;
     readonly sshKeys: pulumi.Input<pulumi.Input<string>[]>;
     readonly type: pulumi.Input<string>;
 }

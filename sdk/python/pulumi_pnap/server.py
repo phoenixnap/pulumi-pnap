@@ -17,14 +17,13 @@ class Server(pulumi.CustomResource):
     location: pulumi.Output[str]
     os: pulumi.Output[str]
     private_ip_addresses: pulumi.Output[list]
-    public: pulumi.Output[bool]
     public_ip_addresses: pulumi.Output[list]
     ram: pulumi.Output[str]
     ssh_keys: pulumi.Output[list]
     status: pulumi.Output[str]
     storage: pulumi.Output[str]
     type: pulumi.Output[str]
-    def __init__(__self__, resource_name, opts=None, action=None, description=None, hostname=None, location=None, os=None, public=None, ssh_keys=None, type=None, __props__=None, __name__=None, __opts__=None):
+    def __init__(__self__, resource_name, opts=None, action=None, description=None, hostname=None, location=None, os=None, ssh_keys=None, type=None, __props__=None, __name__=None, __opts__=None):
         """
         Create a Server resource with the given unique name, props, and options.
         :param str resource_name: The name of the resource.
@@ -58,9 +57,6 @@ class Server(pulumi.CustomResource):
             if os is None:
                 raise TypeError("Missing required property 'os'")
             __props__['os'] = os
-            if public is None:
-                raise TypeError("Missing required property 'public'")
-            __props__['public'] = public
             if ssh_keys is None:
                 raise TypeError("Missing required property 'ssh_keys'")
             __props__['ssh_keys'] = ssh_keys
@@ -80,7 +76,7 @@ class Server(pulumi.CustomResource):
             opts)
 
     @staticmethod
-    def get(resource_name, id, opts=None, action=None, cpu=None, description=None, hostname=None, location=None, os=None, private_ip_addresses=None, public=None, public_ip_addresses=None, ram=None, ssh_keys=None, status=None, storage=None, type=None):
+    def get(resource_name, id, opts=None, action=None, cpu=None, description=None, hostname=None, location=None, os=None, private_ip_addresses=None, public_ip_addresses=None, ram=None, ssh_keys=None, status=None, storage=None, type=None):
         """
         Get an existing Server resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -100,7 +96,6 @@ class Server(pulumi.CustomResource):
         __props__["location"] = location
         __props__["os"] = os
         __props__["private_ip_addresses"] = private_ip_addresses
-        __props__["public"] = public
         __props__["public_ip_addresses"] = public_ip_addresses
         __props__["ram"] = ram
         __props__["ssh_keys"] = ssh_keys
