@@ -59,7 +59,7 @@ namespace Pulumi.PNAP
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
         public Server(string name, ServerArgs args, CustomResourceOptions? options = null)
-            : base("pnap:index/server:Server", name, args ?? ResourceArgs.Empty, MakeResourceOptions(options, ""))
+            : base("pnap:index/server:Server", name, args ?? new ServerArgs(), MakeResourceOptions(options, ""))
         {
         }
 
