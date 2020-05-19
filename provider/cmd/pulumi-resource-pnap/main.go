@@ -17,10 +17,10 @@
 package main
 
 import (
-	"github.com/pulumi/pulumi-terraform-bridge/pkg/tfbridge"
+	"github.com/pulumi/pulumi-terraform-bridge/v2/pkg/tfbridge"
 
-	pnap "github.com/phoenixnap/pulumi-pnap/provider"
-	"github.com/phoenixnap/pulumi-pnap/provider/pkg/version"
+	pnap "github.com/phoenixnap/pulumi-pnap/provider/v2"
+	"github.com/phoenixnap/pulumi-pnap/provider/v2/pkg/version"
 )
 
 func main() {
