@@ -477,6 +477,8 @@ github.com/pulumi/pulumi-terraform-bridge v1.8.4/go.mod h1:EGMJtAh9rdqiqO0B5P458
 github.com/pulumi/pulumi-terraform-bridge/v2 v2.0.0/go.mod h1:CShKXRvffj8fOwzDfBM8qxEpqfMpLLbEAb6QCtcGeUw=
 github.com/pulumi/pulumi-terraform-bridge/v2 v2.3.1 h1:WVSd40b+amHNcZ8ubj3EERhtpRD8RaichgYG4GzpZLk=
 github.com/pulumi/pulumi-terraform-bridge/v2 v2.3.1/go.mod h1:RWum6N9PNAKMP3LCVMyNMz0+iQd9cTILw/WCy3+/4bE=
+github.com/pulumi/pulumi-terraform-bridge/v2 v2.3.3 h1:Plb0jQGD1YZpwwrxJQZx54sQF/YDEUgFk56oQZa6XIM=
+github.com/pulumi/pulumi-terraform-bridge/v2 v2.3.3/go.mod h1:RWum6N9PNAKMP3LCVMyNMz0+iQd9cTILw/WCy3+/4bE=
 github.com/pulumi/pulumi/pkg v0.0.0-20200325225746-80f1989600a3 h1:CUswHMz3r5GBJHeGL5p4NtAGwqoelFyv54KW1A1XQfk=
 github.com/pulumi/pulumi/pkg v0.0.0-20200325225746-80f1989600a3/go.mod h1:iX8/aPGtI3VhJnIUqHoT2iy3/0wQJySIRMs9y2TBILw=
 github.com/pulumi/pulumi/pkg/v2 v2.0.0/go.mod h1:kNG9MBTdKP9AzMgkETumR3fmX9gUYB+HpQL767K6jXc=
@@ -493,6 +495,8 @@ github.com/pulumi/pulumi/sdk/v2 v2.0.0/go.mod h1:W7k1UDYerc5o97mHnlHHp5iQZKEby+o
 github.com/pulumi/pulumi/sdk/v2 v2.1.1-0.20200501132939-93a7dbe41201/go.mod h1:QNbWpL4gvf3X0lUFT7TXA2Jo1ff/Ti2l97AyFGYwvW4=
 github.com/pulumi/pulumi/sdk/v2 v2.1.1-0.20200505193935-7b446d6c55ad h1:KGnB0g2Ye0gtGIF9DVB+0QTTlfIyVLfa3cgqUX9mSOc=
 github.com/pulumi/pulumi/sdk/v2 v2.1.1-0.20200505193935-7b446d6c55ad/go.mod h1:QNbWpL4gvf3X0lUFT7TXA2Jo1ff/Ti2l97AyFGYwvW4=
+github.com/pulumi/pulumi/sdk/v2 v2.3.0 h1:uvRYCmoHILKlyyIbXa5CcLSKKt9n2s8j+GKTffpXQf4=
+github.com/pulumi/pulumi/sdk/v2 v2.3.0/go.mod h1:cvivzHVRA5Xu3NSE/obmHzO3L693IJSd5QccQuBOMUE=
 github.com/pulumi/tf2pulumi v0.6.1-0.20200501223834-18f6ecca3b82 h1:gl5fVOnqlXMBXlsLsa15Qx65yiIEP5er28JGxIGwC8s=
 github.com/pulumi/tf2pulumi v0.6.1-0.20200501223834-18f6ecca3b82/go.mod h1:x3k7VU4kyHYe5xnPh7T7VN++RtSCFENFSw3zFC3wlvc=
 github.com/rcrowley/go-metrics v0.0.0-20181016184325-3113b8401b8a/go.mod h1:bCqnVzQkZxMG4s8nGwiZ5l3QUCyqpo9Y+/ZMZ9VjZe4=
@@ -504,6 +508,7 @@ github.com/russross/blackfriday v1.5.2/go.mod h1:JO/DiYxRf+HjHt06OyowR9PTA263kcR
 github.com/russross/blackfriday/v2 v2.0.1/go.mod h1:+Rmxgy9KzJVeS9/2gXHxylqXiyQDYRxCVz55jmeOWTM=
 github.com/ryanuber/columnize v2.1.0+incompatible/go.mod h1:sm1tb6uqfes/u+d4ooFouqFdy9/2g9QGwK3SQygK0Ts=
 github.com/ryanuber/go-glob v1.0.0/go.mod h1:807d1WSdnB0XRJzKNil9Om6lcp/3a0v4qIHxIXzX/Yc=
+github.com/sabhiram/go-gitignore v0.0.0-20180611051255-d3107576ba94 h1:G04eS0JkAIVZfaJLjla9dNxkJCPiKIGZlw9AfOhzOD0=
 github.com/sabhiram/go-gitignore v0.0.0-20180611051255-d3107576ba94/go.mod h1:b18R55ulyQ/h3RaWyloPyER7fWQVZvimKKhnI5OfrJQ=
 github.com/satori/go.uuid v1.2.0/go.mod h1:dA0hQrYB0VpLJoorglMZABFdXlWrHn1NEOzdhQKdks0=
 github.com/sergi/go-diff v1.0.0/go.mod h1:0CfEIISq7TuYL3j771MWULgwwjU+GofnZX9QAmXWZgo=
