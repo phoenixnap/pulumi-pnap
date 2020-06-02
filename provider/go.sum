@@ -76,6 +76,8 @@ github.com/PNAP/bmc-api-sdk v0.0.7-alpha h1:mCyxWtNqbfAcP2DiUYj+JvUWlU9gY7Q+ATAq
 github.com/PNAP/bmc-api-sdk v0.0.7-alpha/go.mod h1:YwAp7x12IAWmVZKqYUR/nnPEulek98WvPVe95Mi6QX0=
 github.com/PNAP/bmc-api-sdk v0.0.8 h1:msT9HzeH7weRUcj0MbdhheJeWeic3gPHOVRyASN8fi0=
 github.com/PNAP/bmc-api-sdk v0.0.8/go.mod h1:YwAp7x12IAWmVZKqYUR/nnPEulek98WvPVe95Mi6QX0=
+github.com/PNAP/bmc-api-sdk v0.0.9 h1:fg1VtEfdKjAyYLnfY8bBTMSvJSNoHNCn+7Qxqe7nOO8=
+github.com/PNAP/bmc-api-sdk v0.0.9/go.mod h1:YwAp7x12IAWmVZKqYUR/nnPEulek98WvPVe95Mi6QX0=
 github.com/Shopify/sarama v1.19.0/go.mod h1:FVkBWblsNy7DGZRfXLU0O9RCGt5g3g3yEuWXgklEdEo=
 github.com/Shopify/toxiproxy v2.1.4+incompatible/go.mod h1:OXgGpZ6Cli1/URJOF1DMxUHB2q5Ap20/P/eIdh4G0pI=
 github.com/Sirupsen/logrus v1.0.5/go.mod h1:rmk17hk6i8ZSAJkSDa7nOxamrG+SP4P0mm+DAvExv4U=
@@ -448,6 +450,8 @@ github.com/phoenixnap/terraform-provider-pnap v0.0.2 h1:wT3DH7OHO7GwIjKObpcPhG2U
 github.com/phoenixnap/terraform-provider-pnap v0.0.2/go.mod h1:1/g/3EDGyvAqvI3/6mhsgr0r9AQuN6He/ZA+KxVpE04=
 github.com/phoenixnap/terraform-provider-pnap v0.0.3 h1:jf5GWDLTe721bBGLcNhGAIp5+q90s9Dl54KKwgs4z6s=
 github.com/phoenixnap/terraform-provider-pnap v0.0.3/go.mod h1:CC4MLgXpvzreikanTGlcKZaxdS+m5YlYvAyZE6vXOAk=
+github.com/phoenixnap/terraform-provider-pnap v0.0.4 h1:dJUQjSJ0pJv7SjRsa2xNhXk8FxaKu4wsihao2wo+Bo0=
+github.com/phoenixnap/terraform-provider-pnap v0.0.4/go.mod h1:l5Vku3QlJLVdfyx4o4z6InAk1Dfrr9kGIPNYU/XHArk=
 github.com/pierrec/lz4 v2.0.5+incompatible/go.mod h1:pdkljMzZIN41W+lC3N2tnIh5sFi+IEE17M5jbnwPHcY=
 github.com/pkg/errors v0.8.0/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=

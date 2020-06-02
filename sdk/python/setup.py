@@ -30,7 +30,7 @@ def readme():
 
 setup(name='pulumi_pnap',
       version='${VERSION}',
-      description="A PNAP package for creating and managing X cloud resources.",
+      description="A PNAP package for creating and managing cloud resources.",
       long_description=readme(),
       long_description_content_type='text/markdown',
       cmdclass={

@@ -1,1 +1,1 @@
-A PNAP package for creating and managing X cloud resources.
+A PNAP package for creating and managing cloud resources.

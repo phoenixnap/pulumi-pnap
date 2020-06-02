@@ -1,7 +1,7 @@
 {
     "name": "@pulumi/pnap",
     "version": "${VERSION}",
-    "description": "A PNAP package for creating and managing X cloud resources.",
+    "description": "A PNAP package for creating and managing cloud resources.",
     "keywords": [
         "pulumi",
         "pnap"
