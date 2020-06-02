@@ -1,4 +1,3 @@
-//module github.com/pulumi/pulumi-packet/examples
 module github.com/phoenixnap/pulumi-pnap/examples/v2
 
 go 1.13

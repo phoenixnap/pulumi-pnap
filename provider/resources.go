@@ -76,7 +76,7 @@ func Provider() tfbridge.ProviderInfo {
 	prov := tfbridge.ProviderInfo{
 		P:                    p,
 		Name:                 "pnap",
-		Description:          "A PNAP package for creating and managing X cloud resources.",
+		Description:          "A PNAP package for creating and managing cloud resources.",
 		Keywords:             []string{"pulumi", "pnap"},
 		License:              "Apache-2.0",
 		Homepage:             "https://pulumi.io",
