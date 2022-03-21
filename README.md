@@ -94,7 +94,7 @@ To get the values for the clientId and clientSecret, follow these steps:
 
 ## Reference
 
-For detailed reference documentation, please visit [the API docs](https://developers.phoenixnap.com/docs/bmc/1/overview).
+For detailed reference documentation, please visit [the API docs](https://developers.phoenixnap.com/apis).
 
 ## Bare Metal Cloud community
 Become part of the Bare Metal Cloud community to get updates on new features, help us improve the platform, and engage with developers and other users. 
